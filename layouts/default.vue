@@ -1,9 +1,18 @@
 <template>
   <div>
+  	<header-vue/>
     <nuxt />
   </div>
 </template>
+<script>
+import HeaderVue from '../components/HeaderVue.vue';
 
-<style>
+export default {
+  middleware: ['starter'],	
+  components: {
+    HeaderVue,
 
-</style>
+  }
+}
+
+</script>

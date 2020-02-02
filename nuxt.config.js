@@ -12,7 +12,11 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    ],
+    script: [
+      { src: '//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5c8f94f16cc4ba51' },
+      { hid: 'stripe', src: 'https://kit.fontawesome.com/bb825573ac.js', defer: true }
+    ],
   },
   /*
    ** Customize the progress-bar color
@@ -36,17 +40,12 @@ export default {
    ** Nuxt.js modules
    */
   modules: [
-    '@nuxtjs/apollo'
+    '@nuxtjs/axios',
+    'cookie-universal-nuxt'
   ],
 
-  apollo: {
-    clientConfigs: {
-      default: {
-        // required  
-        httpEndpoint: 'http://kocalici.test/graphql',
-      }
-    }
-  },
+
+
   /*
    ** Build configuration
    */
@@ -54,6 +53,11 @@ export default {
     /*
      ** You can extend webpack config here
      */
+    extractCSS: true,
     extend(config, ctx) {}
+  },
+  axios: {
+    baseURL: 'http://kocalici.test/'
   }
+
 }

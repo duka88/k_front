@@ -26,12 +26,15 @@ export default {
    ** Global CSS
    */
   css: [
-    '@/assets/scss/main.scss'
+    '@/assets/scss/main.scss',
+    'vue-slick-carousel/dist/vue-slick-carousel.css'
   ],
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: [
+  { src: './plugins/vue-slick-carousel.js' }
+  ],
   /*
    ** Nuxt.js dev-modules
    */
@@ -57,7 +60,7 @@ export default {
     extend(config, ctx) {}
   },
   axios: {
-    baseURL: 'http://kocalici.test/'
+    baseURL: 'http://127.0.0.1:8000/'
   }
 
 }

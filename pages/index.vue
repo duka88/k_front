@@ -1,17 +1,18 @@
 <template>
   <div class="container">
     <div class="" @click="getUser()">user</div>
-    <div v-for="category in categories">
-      <nuxt-link :to="`categories/${category.slug}`">{{category.name}}</nuxt-link>
-    </div>
+  
+    <vue-carousel />
   </div>
 </template>
 <script>
 import { mapState } from 'vuex';
+import VueCarousel from '../components/CaruselHome.vue';
+
 
 export default {
   components: {
-
+    VueCarousel
   },
   async fetch({ store, from }) {
 

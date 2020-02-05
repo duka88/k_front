@@ -1,7 +1,64 @@
 .header {
   @extend .container;
-  @extend .flex-between;
+  @extend .flex-center;
   align-items: flex-start;
+
+  .side {
+    @extend .flex-between;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    flex-wrap: nowrap;
+    max-width: 230px;
+    box-sizing: border-box;
+    padding: 10px;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, .12);
+
+    .line {
+      background: $pink;
+      height: 2px;
+      width: 60px;
+      margin: 40px 0 15px;
+    }
+
+    .top {
+      box-sizing: border-box;
+      padding: 30px 20px 10px;
+    }
+
+    .bottom {
+      width: 100%;
+
+      .line {
+        margin: 40px auto 15px;
+      }
+
+      .link-wrap {
+        @extend .flex-around;
+      }
+    }
+
+  }
+
+  .login-wrap {
+    @extend .flex-center;
+    width: 100%;
+    background: $pink;
+    border-radius: 30px;
+    padding: 7px 20px;
+    cursor: pointer;
+    color: $white;
+    font-weight: bold;
+    margin: 40px 0 20px;
+    box-sizing: border-box;
+
+    a {
+      color: $white;
+    }
+  }
 
   img {
     height: 100px;
@@ -9,57 +66,36 @@
   }
 
   .nav-wrap {
-    min-width: 350px;
+
 
     .nav {
-      @extend .flex-between;
+      @extend .flex-center;
+      flex-direction: column;
+      align-items: center;
       padding: 15px 0;
 
       a {
         text-decoration: none;
         @extend .cursor-pointer;
+        margin: 6px 0;
+        font-size: 18px;
       }
     }
   }
 
   .social {
-    @extend .flex-between;
+    @extend .flex-center;
     align-items: center;
+    flex-direction: column;
+    width: 100%;
 
-    .search {
-      @extend .flex-center;
-      align-items: center;
-
-      input.search-input {
-        border-radius: 15px 0px 0px 15px;
-        padding: 5px 10px;
-        outline: none;
-        max-height: 30px;
-        border: 2px solid $pink;
-        max-width: 120px;
-        font-size: $font * 0.16;
-      }
-
-      button {
-        border-radius: 0px 15px 15px 0px;
-        background: $pink;
-        color: $white;
-        border: 2px solid $pink;
-        padding: 7px 10px;
-        ;
-        outline: none;
-      }
-
-      .at-resp-share-element .at-share-btn {
-        margin: 0 2px 0px;
-        outline: none;
-
-        &:focus {
-          outline: none;
-          border: none;
-        }
-      }
+    .line {
+      background: $pink;
+      height: 2px;
+      width: 60px;
+      margin: 40px 0 15px;
     }
+
   }
 
   #loginForm {
@@ -71,6 +107,7 @@
     opacity: 0.4;
     transition: 0.5s;
     background: $pink;
+    z-index: 999;
   }
 
   .form {
@@ -83,8 +120,9 @@
     box-sizing: border-box;
     opacity: 1;
     max-width: 550px;
-     transition: 0.5s;
+    transition: 0.5s;
     transform: translate(-50%, -50%);
+    z-index: 9999;
 
     .form-wrap {
       @extend .flex-center;
@@ -109,5 +147,40 @@
 
     }
   }
-}
 
+  .search {
+    @extend .flex-center;
+    align-items: center;
+    border-radius: 15px 0px 0px 15px;
+    background: $white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .12), inset 0 0 1px rgba(0, 0, 0, .05);
+
+    input.search-input {
+      padding: 5px 10px;
+      outline: none;
+      height: 100%;
+      border: none;
+      font-size: $font * 0.16;
+    }
+
+    button {
+      border-radius: 0px 15px 15px 0px;
+      background: transparent;
+      color: $white;
+      border: none;
+      padding: 7px 10px;
+      outline: none;
+      color: black;
+    }
+
+    .at-resp-share-element .at-share-btn {
+      margin: 0 2px 0px;
+      outline: none;
+
+      &:focus {
+        outline: none;
+        border: none;
+      }
+    }
+  }
+}

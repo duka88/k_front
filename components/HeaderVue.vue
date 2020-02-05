@@ -1,20 +1,37 @@
 <template>
   <div class="header">
-    <div class="logo">
-      <nuxt-link to="/"><img src="~/assets/images/logo.png" /></nuxt-link>
+    <div class="search">
+       <button><i class="fas fa-search"></i></button>
+      <input type="text" class="search-input" placeholder="Search">
+     
     </div>
-    <div class="nav-wrap">
-      <div class="nav">
-        <nuxt-link to="/">Home</nuxt-link>
-        <nuxt-link to="/about">About</nuxt-link>
-        <a v-if="!token" @click="loginForm = 'login'">Login / Register</a>
-        <a v-else @click="logOut()">Logout</a>
+    <div class="side">
+      <div class="top">
+        <div class="logo ">
+          <nuxt-link to="/"><img src="~/assets/images/logo.png" /></nuxt-link>
+        </div>
+        <div class="login-wrap">
+          <a v-if="!token" @click="loginForm = 'login'">Login / Register</a>
+          <a v-else @click="logOut()">Logout</a>
+        </div>
+        <div class="nav-wrap">
+          <div class="nav">
+            <nuxt-link to="/">Home</nuxt-link>
+            <nuxt-link to="/about">About</nuxt-link>
+            <nuxt-link to="/">Contact </nuxt-link>
+            <nuxt-link to="/about">About</nuxt-link>
+          </div>
+          <div class="social">
+            <div class="line"></div>
+            <div class="addthis_inline_share_toolbox"></div>
+          </div>
+        </div>
       </div>
-      <div class="social">
-        <div class="addthis_inline_share_toolbox"></div>
-        <div class="search">
-          <input type="text" class="search-input" placeholder="Search">
-          <button><i class="fas fa-search"></i></button>
+      <div class="bottom">
+        <div class="line"></div>
+        <div class="link-wrap">
+          <nuxt-link to="/">Privacy Policy</nuxt-link>
+          <a href="">Created</a>
         </div>
       </div>
     </div>
@@ -81,9 +98,9 @@ export default {
         password: this.password
       })
     },
-    logOut(){
+    logOut() {
 
-       this.$store.dispatch('logOut');
+      this.$store.dispatch('logOut');
     },
     register() {
       this.$axios.post('/api/register', {
@@ -104,7 +121,8 @@ export default {
   computed: {
     ...mapState({
       token: state => state.token,
-     
+
+
     })
   }
 

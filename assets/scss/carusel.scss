@@ -1,0 +1,71 @@
+.carusel {
+  .img-wrapper:focus {
+    outline: none;
+  }
+
+  .slick-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    background: $white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .12), inset 0 0 1px rgba(0, 0, 0, .05);
+    z-index: 99;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .slick-prev {
+    right: 0;
+  }
+
+  .slick-next {
+    left: 0;
+  }
+
+  .carusel-item {
+    @extend .flex-center;
+    align-items: center;
+    width: 130px;
+    height: 130px;
+    border-radius: 65px;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+
+    p {
+      color: $white;
+      font-size: $font*0.2;
+      font-weight: bold;
+      z-index: 99;
+      transition: 0.4s;
+    }
+
+    .carusel-opacity {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: $transperent-bg;
+      transition: 0.4s;
+    }
+  }
+
+  .slick-slide {
+    &:hover .carusel-opacity {
+      width: 0;
+      height: 0;
+      border-radius: 65px;
+    }
+
+    &:hover p {
+      opacity: 0;
+    }
+  }
+}

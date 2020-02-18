@@ -5,11 +5,12 @@ $main-bg: #F8FAFC;
 $transperent-bg: #0000003b;
 $red: #FC99C5;
 $grey: #F5F5F5;
+$grey-dark: #CCC;
 $black-dark: #121212;
 $red-dark: #AA1B28;
 $red-darkest: #991824;
 $grey: #F5F5F5;
-$pink: #FC99C5;
+$main: #6A9D51;
 $hover: #fcb599;
 
 .grey-background {
@@ -253,7 +254,7 @@ $m5: 50px;
 .main-button {
     font-size: $font * 0.24;
       padding: 10px;
-      border: 2px solid $pink;
+      border: 2px solid $main;
       border-radius: 10px;
       margin: 10px 0px;
       color: $black;

@@ -1,7 +1,7 @@
 <template>
   <div class="header">
     <div class="search">
-       <button><i class="fas fa-search"></i></button>
+      <i class="fas fa-search"></i>
       <input type="text" class="search-input" placeholder="Search">
      
     </div>

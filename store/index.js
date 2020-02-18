@@ -2,7 +2,9 @@ export const state = () => ({
   isLoading: true,
   token: null,
   user: [],
+
   backUrl: 'http://127.0.0.1:8000',
+
 })
 
 

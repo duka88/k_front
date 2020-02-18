@@ -18,7 +18,7 @@
     box-shadow: 2px 5px 10px rgba(0, 0, 0, .12);
 
     .line {
-      background: $pink;
+      background: $main;
       height: 2px;
       width: 60px;
       margin: 40px 0 15px;
@@ -46,7 +46,7 @@
   .login-wrap {
     @extend .flex-center;
     width: 100%;
-    background: $pink;
+    background: $main;
     border-radius: 30px;
     padding: 7px 20px;
     cursor: pointer;
@@ -90,7 +90,7 @@
     width: 100%;
 
     .line {
-      background: $pink;
+      background: $main;
       height: 2px;
       width: 60px;
       margin: 40px 0 15px;
@@ -106,7 +106,7 @@
     left: 0;
     opacity: 0.4;
     transition: 0.5s;
-    background: $pink;
+    background: $main;
     z-index: 999;
   }
 
@@ -151,27 +151,35 @@
   .search {
     @extend .flex-center;
     align-items: center;
-    border-radius: 15px 0px 0px 15px;
-    background: $white;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, .12), inset 0 0 1px rgba(0, 0, 0, .05);
+    margin-top: 40px;
+    width: 600px;
+    padding: 0 10px;
+    border-radius: 30px;
+    right: auto;
+    bottom: auto;
+    z-index: 1;
+    box-sizing: border-box;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12), 0 0 1px rgba(0, 0, 0, 0.05) inset;
 
     input.search-input {
-      padding: 5px 10px;
+      padding: 10px 20px;
       outline: none;
       height: 100%;
       border: none;
       font-size: $font * 0.16;
+      background: transparent;
+      color: $black;
+      width: 90%;
+      font-size: 18px;
     }
 
-    button {
-      border-radius: 0px 15px 15px 0px;
-      background: transparent;
-      color: $white;
-      border: none;
-      padding: 7px 10px;
-      outline: none;
-      color: black;
+    i {
+      color: $grey-dark;
+      font-size: 24px;
+      width: 30px;
     }
+
+
 
     .at-resp-share-element .at-share-btn {
       margin: 0 2px 0px;

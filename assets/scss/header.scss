@@ -1,5 +1,5 @@
 .header {
-  @extend .container;
+  width: 230px;
   @extend .flex-center;
   align-items: flex-start;
 
@@ -181,6 +181,21 @@
         outline: none;
         border: none;
       }
+    }
+  }
+}
+
+@media only screen and (max-width: 830px) {
+  .header {
+    max-width: 0px;
+    overflow: hidden;
+    transition: 0.4s;
+
+    .side {
+      max-width: 0px;
+      padding: 0px;
+      overflow: hidden;
+      transition: 0.4s;
     }
   }
 }

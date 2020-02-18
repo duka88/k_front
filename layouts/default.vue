@@ -1,7 +1,9 @@
 <template>
-  <div>
-  	<header-vue/>
-    <nuxt />
+  <div class="main">   	
+     <header-vue/>
+    <div class="page-container">	  
+       <nuxt />
+    </div>  
   </div>
 </template>
 <script>

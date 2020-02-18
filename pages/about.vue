@@ -1,14 +1,16 @@
 <template>
-  <div class="container">
+  <div class="about page">
    
-      <nuxt-link to="/">HOME</nuxt-link>
+      <reacent-recipes/>
     
   </div>
 </template>
 <script>
-
+import ReacentRecipes from '../components/ReacentRecipes.vue';
 
 export default {
-  
+   components: {
+    ReacentRecipes
+  },
 }
 </script>

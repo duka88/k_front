@@ -19,16 +19,10 @@ export default {
   },
   async fetch({ store, from }) {
 
-    let isFrom = !from;
-
-  if (isFrom || store.state.recipes.length === 0) {
-     // await store.dispatch('recipes/loadStarter');
-    }
+ 
   },
   methods:{
-    getUser(){
-      this.$store.dispatch('getUser',this.$store.state.token );
-    }
+   
   },
   computed: {
     ...mapState({

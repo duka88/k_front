@@ -1,7 +1,8 @@
 export const state = () => ({
   isLoading: true,
   token: null,
-  user: []
+  user: [],
+  backUrl: 'http://kocalici.test/'
 })
 
 

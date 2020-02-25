@@ -3,7 +3,7 @@ export const state = () => ({
   token: null,
   user: [],
 
-  backUrl: 'http://127.0.0.1:8000',
+  backUrl: 'http://kocalici.test/',
 
 })
 

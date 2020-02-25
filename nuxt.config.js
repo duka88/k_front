@@ -60,7 +60,7 @@ export default {
     extend(config, ctx) {}
   },
   axios: {
-    baseURL: 'http://127.0.0.1:8000/'
+    baseURL: 'http://kocalici.test/'
   }
 
 }

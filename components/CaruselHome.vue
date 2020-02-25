@@ -1,6 +1,11 @@
 <template>
-  <div>
-    <div class="carusel-container">
+  <div class="mt-20">
+    <div class="heading text-center">
+      <h2 class="black text-semi-bold">Lorem Ipsum Dolor Ist Amet</h2>
+      <p class="small-text">Sed posuere et odio ac aliquet. Fusce imperdiet quam nec sapien finibus, vitae rhoncus lacus maximus.</p>
+      <div class="line"></div>
+    </div>
+    <div class="carusel-container mt-40">
       <div id="scrollCont" class="carusel-inner">
         <div class="carusel-item" v-for="category in categories" :key="category.id" @click="catSelect(category.id)">
           <div class="wrap" :style="{backgroundImage: `url(${url}/img/S/${category.image})`}">

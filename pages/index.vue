@@ -1,7 +1,7 @@
 <template>
   <div class="container">
-    <reacent-recipes />
     <vue-carousel />
+    <reacent-recipes />
     <top-recipes />
     <recipe-list />
   </div>

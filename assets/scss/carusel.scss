@@ -1,19 +1,26 @@
  .carusel-container {
    width: 100%;
-   max-width: 900px;
+   max-width: 1160px;
    height: 175px;
    position: relative;
-   margin: 0 auto;
    overflow: hidden;
 
    i {
-     font-size: 50px;
-     color: #ccc;
-     cursor: pointer;
-     position: absolute;
-     top: 50%;
-     transform: translateY(-50%);
-     z-index: 999;
+      font-size: 12px;
+      color: #ccc;
+      background: $main-bg;
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 999;
+      width: 35px;
+      height: 35px;
+      border: 1px solid;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50px;
 
    }
 

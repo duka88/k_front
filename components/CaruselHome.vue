@@ -2,7 +2,7 @@
   <div>
     <div class="carusel-container">
       <div id="scrollCont" class="carusel-inner">
-        <div class="carusel-item" v-for="category in categories" :key="category.id">
+        <div class="carusel-item" v-for="category in categories" :key="category.id" @click="catSelect(category.id)">
           <div class="wrap" :style="{backgroundImage: `url(${url}/img/S/${category.image})`}">
           </div>
             <p>{{category.name}}</p>
@@ -28,7 +28,9 @@ export default {
   },
 
   methods: {
-
+   catSelect(id){
+      
+   }
   },
   computed: {
     ...mapState({

@@ -1,10 +1,5 @@
 <template>
-  <div class="header">
-    <div class="search">
-      <i class="fas fa-search"></i>
-      <input type="text" class="search-input" placeholder="Search">
-     
-    </div>
+  <div class="header">  
     <div class="side">
       <div class="top">
         <div class="logo ">

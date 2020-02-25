@@ -6,7 +6,7 @@ export const state = () => ({
   like_recipes: [],
   tags: [],
   top_recipes:[],
-
+  
 });
 
 export const mutations = {
